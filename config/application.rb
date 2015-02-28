@@ -1,7 +1,7 @@
 require 'mongoid'
 
 require File.expand_path('../boot', __FILE__)
-Mongoid.load!(File.expand_path('mongoid.yml', './config'))
+# Mongoid.load!(File.expand_path('mongoid.yml', './config'))
 
 # Pick the frameworks you want:
 require "active_model/railtie"
