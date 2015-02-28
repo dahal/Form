@@ -7,6 +7,8 @@ class Simpleform
   has_many :submissions
   before_create :generate_form_id
 
+  # index({ form_id: 1 }, { unique: true, background: true })
+
   private
   def generate_form_id
     begin
