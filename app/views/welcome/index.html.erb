@@ -1,0 +1,59 @@
+<%= render 'shared/main_navigation' %>
+
+<div id="fullpage">
+  <!-- <div class="section active" id="main" style="background-image: url(main-background1.png); background-repeat: no-repeat; margin-top:200px;"> -->
+  <div class="section active" id="main">
+    <div class="on-top">
+      <h1 class="text-brand center">Simple Form, no backend required.</h1>
+        <center><p><h5>No more iframes, no more AJAX calls, use your own css design.</h5></p></center>
+      <h4 class="center">Use it for
+        <span id="email-providers" class="text-brand">Contact Us forms</span>.
+      </h4>
+
+      <br>
+      <div class="offset-by-three six columns">
+        <!-- Mailchimp Subscribe -->
+        <%= render 'shared/mailchimp_subscribe' %>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="signup">
+    <div class="column five columns">
+      <div class="benifits">
+        <h4>Why Fom.io ?</h4>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Easy to use</h5>
+        <br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Use your own Design</h5>
+        <br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Free developer account</h5><br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Easy API & Webhooks</h5><br>
+      </div>
+    </div>
+    <div class="column five columns">
+      <%= image_tag('form-snippet.png') %>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // fullpage
+    $('#fullpage').fullpage({
+      sectionsColor: ['#ECECEC','#EAE1C0'],
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['About', 'Get Started']
+    });
+  });
+
+  // auto changing text
+  (function(){
+    var words = [ 'Contact Us forms', 'Survey forms', 'User Poll forms', 'RSPV List', 'Mailing List', 'Attendence', 'anything & everything.' ], i = 0;
+    setInterval(function(){
+      $('#email-providers').fadeOut(function(){
+        $(this).html(words[i=(i+1)%words.length]).fadeIn();
+      });
+    }, 1500);
+  })();
+</script>

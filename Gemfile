@@ -1,15 +1,19 @@
 source 'https://rubygems.org'
 
+# Default
 gem 'rails', '4.2.0'
 
-gem 'active_model_serializers'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'mongoid'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+
+# Added
+gem 'active_model_serializers'
+gem 'jquery-turbolinks'
+gem 'mongoid'
 
 group :development, :test do
   gem 'pry'
