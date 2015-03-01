@@ -125,7 +125,8 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1;
   font-weight: 300;
-  font-family: 'Muli', sans-serif;
+  /*font-family: 'Muli', sans-serif;*/
+  font-family: Questrial;
   color: #2c3e50; }
 
 

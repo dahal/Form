@@ -16,7 +16,7 @@ class Api::V1::SubmissionsController < ApplicationController
         )
     end
 
-    redirect_to params[:redirect] || 'http://facebook.com'
+    redirect_to params[:redirect] || 'http://example.com'
   end
 
   private
