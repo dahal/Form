@@ -2,7 +2,6 @@
 
 <div id="fullpage">
   <div class="section active" id="main">
-
     <div class="column five columns">
       <div class="benifits">
         <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Easy to use</h5>
@@ -18,8 +17,18 @@
         <%= link_to "LETS GET STARTED", new_user_registration_path, :class => 'button button-brand' %>
       </div>
     </div>
-    <div class="column six columns">
+    <div class="column seven columns" style="padding-right: 30px;">
       <%= image_tag('form-snippet.png') %>
+      <br>
+      <br>
+      <h4><center>Dynamic forms made easy</center></h4>
+    </div>
+    <div class="column twelve columns">
+      <div class="footer">
+        <p class="center">
+          <i class="ion-android-arrow-dropdown-circle icon-32 text-blue"></i>
+        </p>
+      </div>
     </div>
 
   </div>
@@ -28,7 +37,7 @@
     <div class="on-top">
       <h1 class="text-brand center">Simple form, no backend required</h1>
       <h4 class="center">Use it for
-        <span id="email-providers" class="text-blue">contact forms</span>.
+        <span id="use-form-for" class="text-blue">contact forms</span>.
       </h4>
 
       <br>
@@ -39,7 +48,7 @@
     </div>
 
     <div class="column twelve columns">
-      <div class="footer">
+      <div class="footer bg-brand text-light">
         <p class="center"><a href="#">Signup</a><span class="footer-space"></span><a href="">API</a><span class="footer-space"></span><a href="#">Webhooks</a><span class="footer-space"></span><a href="#">FAQ</a></p>
       </div>
     </div>
@@ -62,7 +71,7 @@
   (function(){
     var words = [ 'contact forms', 'surveys', 'user polls', 'RSPVs', 'mailing list', 'anything & everything' ], i = 0;
     setInterval(function(){
-      $('#email-providers').fadeOut(function(){
+      $('#use-form-for').fadeOut(function(){
         $(this).html(words[i=(i+1)%words.length]).fadeIn();
       });
     }, 2000);

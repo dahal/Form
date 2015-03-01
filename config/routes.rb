@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'welcome#index'
+  devise_for :users
 
   draw :api
   post 's/:form_id', to: 'api/v1/submissions#create'

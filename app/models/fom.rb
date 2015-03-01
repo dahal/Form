@@ -5,6 +5,7 @@ class Fom
   field :form_id, type: String
 
   has_many :submissions
+  belongs_to :users
   before_create :generate_form_id
 
   # index({ form_id: 1 }, { unique: true, background: true })
