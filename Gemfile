@@ -15,6 +15,7 @@ gem 'active_model_serializers'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'mongoid'
+gem 'slim'
 
 group :development, :test do
   gem 'pry'
