@@ -1,0 +1,197 @@
+/*Colors*/
+$brand-color: #2C3E50;
+
+
+body {
+  background-color: #ECECEC;
+}
+
+.border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+}
+
+.enough-space {
+  padding-left: 25px;
+}
+
+.responsive-image {
+  height:auto;
+  width:auto;
+  display:block;
+}
+
+.fifty-percent {
+  width: 50%;
+}
+
+.max-width-100 {
+  max-width:100% !important;
+}
+
+.max-width-50 {
+  max-width:80% !important;
+}
+
+.logo-container {
+  margin: 40px;
+}
+
+.dashboard-logo {
+  margin-top: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+.navigation{
+  width: 100%;
+  position:absolute;
+  top:0;
+  z-index: 70;
+}
+
+.twenty-padding {
+  padding: 20px;
+}
+
+.icon-32 {
+  font-size: 32px;
+}
+
+/* Text Colors---------------------------- */
+.text-blue {
+  color: #1EAEDB;
+}
+
+.text-inactive {
+  color: #7f8c8d;
+}
+
+.text-light {
+  color: #bdc3c7;
+}
+
+.text-brand {
+  color: $brand-color
+}
+
+.footer{
+  padding-top: 40px;
+  padding-bottom: 15px;
+  bottom: 0;
+}
+
+/*Buttons----------------------------------*/
+.button.button-brand,
+button.button-brand,
+input[type="submit"].button-brand,
+input[type="reset"].button-brand,
+input[type="button"].button-brand {
+  color: $brand-color;
+  background-color: transparent;
+  border-color: $brand-color; }
+.button.button-brand:hover,
+button.button-brand:hover,
+input[type="submit"].button-brand:hover,
+input[type="reset"].button-brand:hover,
+input[type="button"].button-brand:hover,
+.button.button-brand:focus,
+button.button-brand:focus,
+input[type="submit"].button-brand:focus,
+input[type="reset"].button-brand:focus,
+input[type="button"].button-brand:focus {
+  color: #FFF;
+  background-color: $brand-color;
+  border-color: $brand-color; }
+
+.button.button-brand-active,
+button.button-brand-active,
+input[type="submit"].button-brand-active,
+input[type="reset"].button-brand-active,
+input[type="button"].button-brand-active {
+  color: #FFF;
+  background-color: $brand-color;
+  border-color: $brand-color; }
+.button.button-brand-active:hover,
+button.button-brand-active:hover,
+input[type="submit"].button-brand-active:hover,
+input[type="reset"].button-brand-active:hover,
+input[type="button"].button-brand-active:hover,
+.button.button-brand-active:focus,
+button.button-brand-active:focus,
+input[type="submit"].button-brand-active:focus,
+input[type="reset"].button-brand-active:focus,
+input[type="button"].button-brand-active:focus {
+  color: $brand-color;
+  background-color: transparent;
+  border-color: $brand-color; }
+
+
+.benifits {
+  margin-left: 100px;
+}
+
+.benifits h5 {
+  margin-left: 10px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.hint {
+  font-size: 12px;
+  display: inline-block;
+}
+
+.on-top {
+  z-index: 400;
+  position:relative;
+}
+
+// For email preview
+div.email {
+  background-color:white;
+  width: 96%;
+  padding: 2%;
+}
+
+div.desktop {
+  height: 580px;
+}
+
+div.mobile {
+  height: 585px;
+  overflow: scroll;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.number-rating {
+  text-decoration: none;
+}
+
+.footer {
+  width:100%;
+  height:20px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background:$brand-color;
+  color: #ecf0f1;
+}
+
+.footer-space {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
