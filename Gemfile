@@ -12,6 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Added
 gem 'active_model_serializers'
+gem 'devise'
 gem 'jquery-turbolinks'
 gem 'mongoid'
 
