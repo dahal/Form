@@ -21,8 +21,8 @@
           <div class="ten columns">
             <%= simple_form_for(@form, url: dashboard_fom_path(@test_form.id)) do |f| %>
               <div class="twelve columns">
-                <label for="new_fom"><h4>Name your Form</h4></label>
-                <%= f.input :name, label: false, input_html: { class: 'u-full-width' } %>
+                <label for="new_fom"><h4>Name your form</h4></label>
+                <%= f.input :name, label: false, input_html: { class: 'u-full-width', value: "#{@test_form.name}" } %>
               </div>
           </div>
         </div>
