@@ -2,7 +2,7 @@
 
 <div id="fullpage">
   <div class="section active" id="main">
-    <div class="column five columns">
+    <div class="column five columns mobile-hide tablet-hide">
       <div class="benifits">
         <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Easy to use</h5>
         <br>
@@ -14,26 +14,33 @@
         <br>
         <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Free developer account</h5><br>
         <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"><a href="#">API</a> & <a href="">Webhooks</a> for third</h5><h5 class="enough-space">party apps integration</h5><br>
-        <%= link_to "LETS GET STARTED", new_user_registration_path, :class => 'button button-brand' %>
+        <%= link_to "LETS GET STARTED", new_user_registration_path, :class => 'button button-brand mobile-hide' %>
       </div>
     </div>
-    <div class="column seven columns" style="padding-right: 30px;">
-      <%= image_tag('form-snippet.png') %>
-      <br>
-      <br>
-      <h4><center>Dynamic forms made easy</center></h4>
-    </div>
-    <div class="column twelve columns">
-      <div class="footer">
-        <p class="center">
-          <i class="ion-android-arrow-dropdown-circle icon-32 text-blue"></i>
-        </p>
-      </div>
+    <div class="column six columns mobile-hide tablet-hide">
+      <%= image_tag('form-snippet.png', class: "mobile-hide") %>
+      <h4 class="center">Dynamic forms made easy</h4>
     </div>
 
+    <!-- Show only on Tablet -->
+    <div class="column twelve columns desktop-hide">
+      <div class="benifits">
+        <h4>Dynamic forms made easy</h4>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Easy to use</h5>
+        <br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> No more iframe</h5>
+        <br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> No more AJAX calls</h5>
+        <br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Use your own Design</h5>
+        <br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"> Free developer account</h5><br>
+        <i class="ion-android-checkmark-circle icon-32 text-brand inline"> </i> <h5 class="inline"><a href="#">API</a> & <a href="">Webhooks</a> for third</h5><h5 class="enough-space">party apps integration</h5><br>
+        <%= link_to "LETS GET STARTED", new_user_registration_path, :class => 'button button-brand mobile-hide' %>
+      </div>
+    </div>
   </div>
   <div class="section" id="signup">
-
     <div class="on-top">
       <h1 class="text-brand center">Simple form, no backend required</h1>
       <h4 class="center">Use it for
@@ -43,7 +50,9 @@
       <br>
       <div class="offset-by-three six columns">
         <!-- Mailchimp Subscribe -->
-        <%= render 'shared/mailchimp_subscribe' %>
+        <div style="padding: 15px 15px;">
+          <%= render 'shared/mailchimp_subscribe' %>
+        </div>
       </div>
     </div>
 
@@ -60,8 +69,8 @@
   $(document).ready(function() {
     // fullpage
     $('#fullpage').fullpage({
-      // sectionsColor: ['#ECECEC','#EAE1C0'],
-      sectionsColor: ['#ECECEC','#ECECEC'],
+      sectionsColor: ['#ECECEC','#EAE1C0'],
+      // sectionsColor: ['#ECECEC','#ECECEC'],
       navigation: true,
       navigationPosition: 'right',
       navigationTooltips: ['About', 'Get Started']

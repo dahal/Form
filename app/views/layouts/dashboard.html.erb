@@ -3,7 +3,6 @@
 <head>
   <title>Fom.io</title>
   <%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Questrial" />
   <%= csrf_meta_tags %>
@@ -15,5 +14,6 @@
 
   <%= yield %>
 
+  <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
 </body>
 </html>
