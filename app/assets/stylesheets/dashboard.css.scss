@@ -1,4 +1,6 @@
 @import "vendor/normalize";
 @import "vendor/skeleton";
-@import "dashboard/custom";
+@import "vendor/jquery.shifter.min";
+@import "dashboard/base";
+@import "dashboard/sidebar";
 @import "custom";

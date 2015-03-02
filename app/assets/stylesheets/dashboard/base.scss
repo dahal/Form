@@ -1,0 +1,29 @@
+/*Colors*/
+$sidebar-bg-color: #34495E;
+$nav-bg-color: #2C3E50;
+
+.img-circle {
+  border-radius: 50%;
+}
+
+// Nav
+.nav{
+  list-style:none;
+  margin:0;
+  padding:0 20px 0 20px;
+  background-color: $nav-bg-color;
+}
+.nav li{
+  display:inline;
+}
+.nav a{
+  display:inline-block;
+  padding:10px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav img{
+  display:inline-block;
+  padding: 9px;
+}
