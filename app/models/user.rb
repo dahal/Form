@@ -35,4 +35,11 @@ class User
   # field :locked_at,       type: Time
 
   has_many :foms
+
+  after_create :create_initial_form
+
+  private
+  def create_initial_form
+    Fom.create(name: 'Your Awesome Form', users_id: self.id, test_form: true)
+  end
 end

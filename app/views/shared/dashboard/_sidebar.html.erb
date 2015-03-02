@@ -1,8 +1,15 @@
-<div id="site-wrapper">
-  <div id="site-canvas">
-    <div id="site-menu">
-      <h4>Your Forms</h4>
-      <button>Create New</button>
+<div id="site-menu">
+  <h4>Your Forms</h4>
+  <hr>
+
+  <% if current_user.foms? %>
+
+    <div class="form-label">
+      <%= current_user.foms.first.name %>
+      <hr>
     </div>
-  </div>
+
+  <% end %>
+  <button>Create New Form</button>
+  <p><%= current_user.email %> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></p>
 </div>

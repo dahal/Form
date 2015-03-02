@@ -16,6 +16,7 @@ gem 'devise'
 gem 'jquery-turbolinks'
 gem 'mongoid'
 gem 'slim'
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry'

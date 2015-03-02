@@ -1,3 +1,69 @@
 <%= render 'shared/dashboard/navbar' %>
 
-<%= render 'shared/dashboard/sidebar' %>
+<div id="site-wrapper">
+  <div id="site-canvas">
+    <!-- Sidebar -->
+    <%= render 'shared/dashboard/sidebar' %>
+
+    <!-- Contents -->
+    <% if current_user.foms.count == 1 && current_user.foms.first.test_form == true %>
+      <% @test_form = current_user.foms.first %>
+      <div class="container">
+        <br>
+        <h4>Its easy... </h4>
+        <hr>
+
+        <!-- One -->
+        <div class="row" style="padding-bottom: 50px;">
+          <div class="two columns">
+            <%= image_tag("one.png", size: "70") %>
+          </div>
+          <div class="ten columns">
+            <%= simple_form_for(@form, url: dashboard_fom_path(@test_form.id)) do |f| %>
+              <div class="twelve columns">
+                <label for="new_fom"><h4>Name your Form</h4></label>
+                <%= f.input :name, label: false, input_html: { class: 'u-full-width' } %>
+              </div>
+          </div>
+        </div>
+
+        <div class="row" style="padding-bottom: 50px;">
+          <!-- Two -->
+          <div class="two columns">
+            <%= image_tag("two.png", size: "70") %>
+          </div>
+
+          <div class="ten columns">
+            <h4 class="">Copy this snippet</h4>
+            <p>Please feel free to add as many <code>input</code> fields as you want. <a href="#">Documentation</a> for details.</p>
+<!-- Shit ton of syntax highlighting -->
+<pre style='color:#55cc66; font-size: 20px;'><html><pre>
+<span style='color:#865700; '>&lt;</span><span style='color:#508050; font-weight:bold; '>form</span><span style='color:#477766; '> </span><span style='color:#477766; '>action</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"http://fom.io/s/<%= @test_form.form_id %>"</span><span style='color:#477766; '> </span><span style='color:#477766; '>method</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"POST"</span><span style='color:#865700; '>></span>
+  <span style='color:#865700; '>&lt;</span><span style='color:#508050; font-weight:bold; '>input</span><span style='color:#477766; '> </span><span style='color:#477766; '>type</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"hidden"</span><span style='color:#477766; '> </span><span style='color:#477766; '>name</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"utf8"</span><span style='color:#477766; '> </span><span style='color:#477766; '>value</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"β"</span><span style='color:#865700; '>></span>
+  <span style='color:#865700; '>&lt;</span><span style='color:#508050; font-weight:bold; '>input</span><span style='color:#477766; '> </span><span style='color:#477766; '>type</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"text"</span><span style='color:#477766; '> </span><span style='color:#477766; '>name</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"name"</span><span style='color:#477766; '> placeholder</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"Name"</span><span style='color:#865700; '>></span>
+  <span style='color:#865700; '>&lt;</span><span style='color:#508050; font-weight:bold; '>input</span><span style='color:#477766; '> </span><span style='color:#477766; '>type</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"submit"</span><span style='color:#477766; '> </span><span style='color:#477766; '>name</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>"submit"</span><span style='color:#865700; '>></span>
+<span style='color:#865700; '>&lt;/</span><span style='color:#508050; font-weight:bold; '>form</span><span style='color:#865700; '>></span>
+</pre></pre>
+<!-- /Shit ton of syntax highlighting -->
+
+          </div>
+
+          <!-- Three -->
+          <div class="row" style="padding-bottom: 50px;">
+            <div class="two columns">
+              <%= image_tag("three.png", size: "70") %>
+            </div>
+            <div class="ten columns">
+              <h5>Done! </h5>
+              <%= f.submit "Save and Continue" %>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    <% end %>
+  </div>
+</div>

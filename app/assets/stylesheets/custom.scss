@@ -1,9 +1,11 @@
 /*Colors*/
 $brand-color: #CF2227;
+$background-color: #ECECEC;
+$brand-primary: #2C3E50;
 
 
 body {
-  background-color: #ECECEC;
+  background-color: $background-color;
 }
 
 .border {
@@ -15,6 +17,7 @@ body {
 .enough-space {
   padding-left: 25px;
 }
+
 
 .responsive-image {
   height:auto;
@@ -57,8 +60,20 @@ body {
   padding: 20px;
 }
 
+.icon-12 {
+  font-size: 12px;
+}
+
+.icon-24 {
+  font-size: 24px;
+}
+
 .icon-32 {
   font-size: 32px;
+}
+
+.icon-48 {
+  font-size: 48px;
 }
 
 /* Text Colors---------------------------- */
@@ -225,4 +240,19 @@ div.mobile {
 // .desktop-hide
 @media screen and (min-width: 750px) {
   .desktop-hide{ display: none; }
+}
+
+// scrollbar
+/* Chrome, Safari */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece  {
+  background-color: $background-color;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: #6C7A89;
 }
