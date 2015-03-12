@@ -1,7 +1,7 @@
 class Dashboard::FomsController < Dashboard::BaseController
 
   def new
-    @form = Fom.new
+    @form = Form.new
   end
 
 end

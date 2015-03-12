@@ -3,7 +3,7 @@ class Dashboard::BaseController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @form = Fom.new
+    @form = Form.new
     # require "pry"; binding.pry
 
   end

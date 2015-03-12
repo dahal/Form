@@ -34,12 +34,12 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
-  has_many :foms
+  has_many :forms
 
   after_create :create_initial_form
 
   private
   def create_initial_form
-    Fom.create(name: 'Your Awesome Form', users_id: self.id, test_form: true)
+    Form.create(name: 'Your Awesome Form', user_id: self.id, test_form: true)
   end
 end

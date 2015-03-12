@@ -4,8 +4,14 @@ class Api::V1::SubmissionsController < ApplicationController
   before_action :is_not_spam?, only: [:create]
 
   def index
-    @submissions = Submission.where(form_id: @form.id)
-    render json: @submissions
+    @submissions = Submission.where(form_id: @form.id).page(params[:page])
+    render json: @submissions, meta: {
+      current_page: @submissions.current_page,
+      next_page: @submissions.next_page,
+      prev_page: @submissions.prev_page,
+      total_pages: @submissions.total_pages,
+      total_count: @submissions.total_count
+    }
   end
 
   def create
@@ -21,7 +27,7 @@ class Api::V1::SubmissionsController < ApplicationController
 
   private
   def set_form
-    @form = Fom.find_by(form_id: params[:form_id] || params[:fom_id])
+    @form = Form.find_by(form_id: params[:form_id])
   end
 
   def is_not_spam?

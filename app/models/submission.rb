@@ -2,7 +2,8 @@ class Submission
   include Mongoid::Document
   include Mongoid::Attributes::Dynamic
 
-  belongs_to :fom, foreign_key: :form_id
+  belongs_to :form
   field :details, type: Hash
-  field :created_at, type: DateTime, default: Time.now
+
+  include Mongoid::Timestamps::Short
 end

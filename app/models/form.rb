@@ -1,4 +1,4 @@
-class Fom
+class ::Form
   include Mongoid::Document
 
   field :name, type: String
@@ -6,11 +6,12 @@ class Fom
   field :test_form, type: Boolean
 
   has_many :submissions
-  belongs_to :users
+  belongs_to :user
   before_create :generate_form_id
 
   validates_presence_of :name
 
+  include Mongoid::Timestamps::Short
   # index({ form_id: 1 }, { unique: true, background: true })
 
   private

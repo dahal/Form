@@ -19,3 +19,10 @@ This API is in <sup>Beta</sup> phase. We would like you to give it a try. Please
   <input type="submit" name="submit">
 </form>
 ```
+
+### Get Submissions
+
+http://localhost:3000/api/v1/form/c5fd3704/submissions
+
+#### If more than 20 (pagination)
+http://localhost:3000/api/v1/form/c5fd3704/submissions?page=2

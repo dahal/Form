@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'active_model_serializers'
 gem 'devise'
 gem 'jquery-turbolinks'
+gem 'kaminari'
 gem 'mongoid'
 gem 'puma'
 gem 'simple_form'
@@ -25,6 +26,7 @@ gem 'slim'
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem 'faker'
   gem 'pry'
   gem 'spring'
 end
